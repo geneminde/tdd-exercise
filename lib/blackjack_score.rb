@@ -21,7 +21,7 @@ def valid_hand(hand)
   hand.each do |element|
     raise ArgumentError if !valid_cards.include?(element)
   end
-  raise ArgumentError if hand.length == 0 || hand.length > 5
+  raise ArgumentError if hand.length < 2 || hand.length > 5
 end
 
 def blackjack_score(hand)
